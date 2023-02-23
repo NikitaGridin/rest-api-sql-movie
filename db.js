@@ -1,18 +1,6 @@
-const mysql = require("mysql");
+const { Sequelize } = require("@sequelize/core");
 
-const conn = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "movie",
+module.exports = new Sequelize("movie", "root", "", {
+  host: "https://free13.beget.com/phpMyAdmin/db_structure.php?server=1&db=m95062yu_mysql",
+  dialect: "mysql",
 });
-
-conn.connect((error) => {
-  if (error) {
-    console.log("Error" + error);
-  } else {
-    console.log("Connected");
-  }
-});
-
-module.exports = conn;
