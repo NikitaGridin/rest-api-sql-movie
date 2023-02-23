@@ -6,6 +6,9 @@ const authorRouter = require("./routes/author.routes");
 app.use(express.json());
 
 app.use("/api", authorRouter);
+app.get("/", (req, res) => {
+  res.send("HELLO");
+});
 
 app.listen(port, () => {
   console.log(`Server listen on port ${port}`);
