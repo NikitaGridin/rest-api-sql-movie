@@ -15,7 +15,7 @@ class authorController {
     if (author.length > 0) {
       return res.status(201).json(author);
     } else {
-      return res.status(404).json("Пользователь не найден");
+      return res.status(404).json("Пользователь не найден!");
     }
   }
   async createAuthor(req, res, next) {
